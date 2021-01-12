@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 37px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.header {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.wrapper p {
+    font-size: 0.35rem;
+    padding: 5px 5px;
+    line-height: 0.4rem;
+}
+
+.cover {
+    width: 100%;
+    margin-bottom: 8vh;
+}
+
+.nav-tab {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    height: 8vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: ghostwhite;
+    white-space: nowrap;
+}
+
+.nav-tab span {
+    padding: 0px 13px;
+}
+
+.nav-tab .selected {
+    color: greenyellow;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: block;
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+    
+    .wrapper p {
+        font-size: 0.4rem;
+        line-height: 0.5rem;
+    }
+
+    .nav-tab {
+        width: 56px;
+        top: 0px;
+        height: 100%;
+        overflow: scroll;
+        display: block;
+        white-space: break-spaces;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header {
+        height: 300px;
+    }
+
+    .wrapper {
+        width: 70%;
+        padding-top: 20px;
+        height: 100%;
+        display: block;
+    }
+
+    .cover {
+        width: 49%;
+        margin-bottom: 0px;
+    }
+
+    .wrapper h2 {
+        font-size: 1.4rem;
+        margin-top: 0px;
+        width: 50%;
+        float: right;
+    }
+    
+    .wrapper p {
+        width: 47%;
+        font-size: 0.45rem;
+        padding: 6% 0px 0px 4%;
+        line-height: 0.5rem;
+        float: right;
+        margin: 0;
+    }
+
+    .nav-tab {
+        width: 44px;
+        top: 0px;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        white-space: initial;
+    }
+}

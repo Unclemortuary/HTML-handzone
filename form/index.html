@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form</title>
+</head>
+<body>
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+        <div>
+            <label for="name">Name</label>
+            <!-- without "name" attribute input value will not be presented in URL parameters -->
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <!-- label can wrap input element instead of "for" attribute -->
+            <label>
+                Password
+                <input type="password" name="password" id="password">
+            </label>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <!-- with "required" attribute browser wont allow to submit form without this field -->
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="1" max="100" step="2" placeholder="123">
+        </div>
+        <div>
+            <label for="date">Birthdate</label>
+            <input type="date" name="date" id="date" min="2020-11-15">
+        </div>
+        <div>
+            Favorite Food
+            <div>
+                <label for="banana">Banana</label>
+                <!-- without "value" attribute the value is gonna be "on" -->
+                <input type="checkbox" name="favoriteFood" id="banana" value="banana">
+            </div>
+            <div>
+                <label for="apple">Apple</label>
+                <input type="checkbox" name="favoriteFood" id="apple" value="apple">
+            </div>
+        </div>
+        <div>
+            Gender
+            <div>
+                <label foe="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male"/>
+            </div>
+            <div>
+                <label foe="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female"/>
+            </div>
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select multiple>
+                <option value="Green">Green</option>
+                <option label="Red" value="Red"></option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio">My name is Artem</textarea> 
+        </div>
+        <div>
+            <label for="file">File</label>
+            <!-- you have to specify "enctype" attribute to "multipart/form-data" for the form 
+                so that browser will load the file as multi parts (because file is big and cannot be loaded at once) -->
+            <input id="file" type="file" name="file">
+        </div>
+        <!-- DOESNT WORK! -->
+        <div>
+            <form action="phone">Phone</form>
+            <!-- on the mobile it will open number keypad instead of generic text keypad -->
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <!-- on the mobile it will open URL keypad -->
+            <input type="url" name="url" id="url">
+        </div>
+        <!-- <div>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+        </div> -->
+        <input type="hidden" name="hidden" value="Hi">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
